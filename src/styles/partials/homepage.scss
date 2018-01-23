@@ -70,7 +70,15 @@
 .tab-pane {
   @include break-max(tablet) {
     display: block !important;
-    margin-bottom: 140px;
+    padding-bottom: 80px;
+    margin-bottom: 80px;
+    border-bottom: 1px solid #ECECEC;
+
+    &:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
   }
 }
 

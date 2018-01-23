@@ -63,7 +63,7 @@
   }
 
   @include break-max(medium) {
-    margin: 40px -15px !important;
+    margin: 40px 0;
 
     img, &__text {
       display: block;
@@ -73,6 +73,18 @@
 
     &__text {
       padding: 10px 15px 0 !important;
+      font-size: 18px;
+      line-height: normal;
+
+      span {
+        font-size: 22px;
+        line-height: normal;
+      }
+    }
+
+    &--text,
+    &--indent  {
+      margin: 40px -15px;
     }
   }
 }
@@ -234,7 +246,12 @@
     max-width: 660px;
   }
 
+  @include break-max(tablet) {
+    border-bottom: 1px solid #ECECEC;
+  }
+
   @include break-max(medium) {
+
     .list_quotes {
       margin-top: 40px;
     }
@@ -372,6 +389,12 @@
 
   .partners_list {
     margin-top: 100px;
+  }
+
+  @include break-max(medium) {
+    .partners_list {
+      margin-top: 40px;
+    }
   }
 }
 

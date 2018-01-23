@@ -43,6 +43,9 @@ class Header {
       const onStateChange = () => {
         if (watcher.isAboveViewport && watcher.isInViewport) {
           node.parentNode.classList.add(CN_NAV_ITEM__ACTIVE)
+          NAV.classList.remove('nav_dropdown--open')
+          BODY.classList.remove('menu_opened')
+          NAV_TOGGLE.classList.remove('active')
         } else {
           node.parentNode.classList.remove(CN_NAV_ITEM__ACTIVE)
         }

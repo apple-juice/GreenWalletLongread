@@ -316,7 +316,7 @@ textarea.form-control {
   margin-top: 25px;
   margin-bottom: 25px;
 
-  .form-control {
+  .form-control--email {
     width: 356px;
     float: left;
     margin-right: 19px;
@@ -375,4 +375,22 @@ textarea.form-control {
   color: #ff3e2e;
   font-size: 14px;
   margin-top: -15px;
+  display: none;
+}
+
+.label_success {
+  color: #388020;
+  font-size: 14px;
+  margin-top: -15px;
+  display: none;
+}
+
+.form-group {
+  position: relative;
+}
+
+#mc_embed_signup div.mce_inline_error {
+  background: transparent !important;
+  color: #ff3e2e !important;
+  font-size: 14px;
 }
