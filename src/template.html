@@ -46,14 +46,13 @@
       });
 
 
-      var wH = document.body.offsetHeight;
+      setTimeout(function () {
+        var wH = document.body.offsetHeight;
 
-      console.log(wH - $('.tab-content').outerHeight() + $('.affix_target').offset().top)
-      $(document).ready(function () {
         $('#affix').affix({
           offset: {
             top:  $('.affix_target').offset().top - 100,
-            bottom: wH - $('.tab-content').outerHeight() + $('.tab-content').offset().top - $(window).height()
+            bottom: wH - $('.tab-content').outerHeight() - $('.tab-content').offset().top
           }
         });
 
@@ -62,7 +61,7 @@
             scrollTop: $('.tab-content').offset().top - 140
           });
         })
-      })
+      }, 400)
     </script>
 
   </body>

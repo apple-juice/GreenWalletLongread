@@ -140,6 +140,7 @@
 
 .section_lead {
   height: 100%;
+  height: 100vH;
   background: getColor(primary) url(/images/electricity_cc.jpg) no-repeat center;
   background-size: cover;
   color: getColor(white);
