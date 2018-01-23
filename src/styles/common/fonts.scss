@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,600,700');
+
+
+@font-face {
+  font-family: 'icons';
+  src:  url('/fonts/icons/icons.eot?nir5od');
+  src:  url('/fonts/icons/icons.eot?nir5od#iefix') format('embedded-opentype'),
+  url('/fonts/icons/icons.ttf?nir5od') format('truetype'),
+  url('/fonts/icons/icons.woff?nir5od') format('woff'),
+  url('/fonts/icons/icons.svg?nir5od#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon--check:before {
+  content: "\e900";
+}
+.icon--facebook:before {
+  content: "\e901";
+}
+.icon--globe:before {
+  content: "\e902";
+}
+.icon--newsletter:before {
+  content: "\e903";
+}
+.icon--twitter:before {
+  content: "\e904";
+}
+.icon--video:before {
+  content: "\e905";
+}
+.icon--whitepaper:before {
+  content: "\e906";
+}
