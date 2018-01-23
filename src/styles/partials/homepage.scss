@@ -65,6 +65,14 @@
       }
     }
   }
+
+  &.affix {
+    top: 100px;
+  }
+
+  &.affix-bottom {
+    position: absolute;
+  }
 }
 
 .tab-pane {

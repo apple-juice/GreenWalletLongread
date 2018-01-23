@@ -100,9 +100,18 @@
   @include break-max(medium) {
     &__list {
       font-size: 14px;
+      line-height: 1.7em;
 
       li {
         margin-bottom: 10px;
+
+        &.active {
+          &:before {
+            height: 16px;
+            margin-top: -20px;
+            width: 16px;
+          }
+        }
       }
     }
   }

@@ -309,8 +309,6 @@ textarea.form-control {
   }
 }
 
-
-
 .form_subscribe {
   max-width: 520px;
   margin-top: 25px;
@@ -325,6 +323,7 @@ textarea.form-control {
 
   @include break-max(medium) {
     max-width: none;
+    margin: 15px 0;
 
     .form-control,
     .btn {
@@ -332,6 +331,10 @@ textarea.form-control {
       float: none;
       margin-bottom: 20px;
       max-width: none;
+    }
+
+    .form-group {
+      margin-bottom: 0;
     }
   }
 }
