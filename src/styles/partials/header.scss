@@ -1,6 +1,6 @@
 .header {
   width: 100%;
-  position: fixed;
+  position: absolute;
   z-index: getZIndex(fixed);
   background: transparent;
   transition: background-color $transition;
@@ -49,6 +49,7 @@
   &--inverse {
     background-color: getColor(white) !important;
     background-image: none;
+    position: fixed;
 
     .logo_show {
       opacity: 0;
