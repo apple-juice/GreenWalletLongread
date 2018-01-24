@@ -136,11 +136,15 @@
   }
 
   @include break-max(tablet) {
-    position: fixed;
     left: 24px;
     top: 20px;
     z-index: 1000;
     margin: 0;
+    position: absolute;
+
+    .header--inverse & {
+      position: fixed;
+    }
   }
 }
 
@@ -226,14 +230,18 @@
 .nav_menu {
   float: right;
   display: none;
-  position: fixed;
   z-index: 1000;
   right: 0;
   top: 0;
+  position: absolute;
 
   .btn {
     padding: 24px;
     margin: 0;
+  }
+
+  .header--inverse & {
+    position: fixed;
   }
 
   @include break-max(tablet) {
