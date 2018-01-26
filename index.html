@@ -51,11 +51,11 @@
           </menu>
         </div>
         <div class="social pull-left">
-          <a href="" class="social_item">
+          <a href="https://fb.com/greenenergywallet" target="_blank" class="social_item">
             <i class="icon icon--facebook"></i>
             <span class="hidden-md hidden-lg">Facebook</span>
           </a>
-          <a href="" class="social_item">
+          <a  href="https://twitter.com/GreenEnergyW" target="_blank"  class="social_item">
             <i class="icon icon--twitter"></i>
             <span class="hidden-md hidden-lg">Twitter</span>
           </a>
@@ -141,8 +141,8 @@
     <section class="section section_manifesto" id="manifesto">
   <div class="container">
     <div class="row">
-      <div class="col-md-5 hidden-xs hidden-sm">
-        <ul class="nav nav-tabs" role="tablist">
+      <div class="col-md-5 hidden-xs hidden-sm affix_target">
+        <ul class="nav nav-tabs" role="tablist" id="affix">
           <li role="presentation" class="active"><a href="#tab_manifesto" aria-controls="tab_manifesto" role="tab" data-toggle="tab">Manifesto</a></li>
           <li role="presentation"><a href="#tab_about" aria-controls="tab_about" role="tab" data-toggle="tab">What is Green Energy Wallet?</a></li>
           <li role="presentation"><a href="#tab_benefits" aria-controls="tab_benefits" role="tab" data-toggle="tab">Key Benefits</a></li>
@@ -507,6 +507,7 @@
         <div class="team_item__info">
           <div class="team_item__name">
             <div class="team_item__title">Christian Svoboda</div>
+            <div class="team_item__desc">Co-Founder</div>
           </div>
         </div>
         <div class="team_item__content">
@@ -525,6 +526,7 @@
         <div class="team_item__info">
           <div class="team_item__name">
             <div class="team_item__title">Christina Roth</div>
+            <div class="team_item__desc">Co-Founder</div>
           </div>
         </div>
         <div class="team_item__content">
@@ -637,11 +639,11 @@
         <h3>Get in touch</h3>
         <p><a href="mailto:contact@greenenergywallet.com">contact@greenenergywallet.com</a></p>
         <div class="social">
-          <a href="" class="social_item">
+          <a href="https://fb.com/greenenergywallet" target="_blank" class="social_item">
             <i class="icon icon--facebook"></i>
             <span>Facebook</span>
           </a>
-          <a href="" class="social_item">
+          <a href="https://twitter.com/GreenEnergyW" target="_blank" class="social_item">
             <i class="icon icon--twitter"></i>
             <span>Twitter</span>
           </a>
@@ -655,7 +657,7 @@
             <div id="mc_embed_signup_scroll">
 
               <div class="mc-field-group form-group">
-                <input type="text" value="" name="FNAME" class="form-control required" id="mce-FNAME" placeholder="Your name">
+                <input type="text" value="" name="FNAME" class="form-control required" id="mce-FNAME" placeholder="First name">
               </div>
 
               <div class="mc-field-group form-group clearfix">
@@ -707,6 +709,24 @@
         }
 
       });
+
+
+      setTimeout(function () {
+        var wH = document.body.offsetHeight;
+
+        $('#affix').affix({
+          offset: {
+            top:  $('.affix_target').offset().top - 100,
+            bottom: wH - $('.tab-content').outerHeight() - $('.tab-content').offset().top
+          }
+        });
+
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+          $('html, body').animate({
+            scrollTop: $('.tab-content').offset().top - 140
+          });
+        })
+      }, 400)
     </script>
 
   <script type="text/javascript" src="index.js"></script></body>
